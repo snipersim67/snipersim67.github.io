@@ -1,0 +1,90 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY / PAGE
+========================= */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  font-family: 'JetBrains Mono', monospace;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   TITLE & TEXT
+========================= */
+h1 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 1rem;
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   CANVAS (GAME)
+========================= */
+canvas {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.03),
+      rgba(0,0,0,0.2)
+    ),
+    #020617;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.7),
+    inset 0 0 0 1px rgba(255,255,255,0.03);
+
+  cursor: crosshair;
+}
+
+/* =========================
+   UI FEEL (OPTIONAL)
+========================= */
+canvas:active {
+  cursor: none;
+}
+
+/* =========================
+   SELECTION / SCROLL
+========================= */
+::selection {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* =========================
+   MOBILE WARNING (OPTIONAL)
+========================= */
+@media (max-width: 950px) {
+  canvas {
+    width: 95vw;
+    height: auto;
+  }
+
+  p {
+    text-align: center;
+    padding: 0 1rem;
+  }
+}
